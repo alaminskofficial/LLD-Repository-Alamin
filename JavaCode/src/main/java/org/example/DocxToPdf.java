@@ -21,11 +21,11 @@ package org.example;
 //
 //    public static void main(String[] args) {
 //        try {
-//            FileInputStream docxInputStream = new FileInputStream("C:\\Users\\alamin\\Downloads\\ybl_revised_marcom_bc_certificate_template.docx");
+//            FileInputStream docxInputStream = new FileInputStream("C:\\template.docx");
 //            XWPFDocument document = new XWPFDocument(docxInputStream);
 //
 //            Document pdfDocument = new Document(PageSize.A4);
-//            PdfWriter pdfWriter = PdfWriter.getInstance(pdfDocument, new FileOutputStream("C:\\Users\\alamin\\Downloads\\ybl_revised_marcom_bc_certificate_template_output.pdf"));
+//            PdfWriter pdfWriter = PdfWriter.getInstance(pdfDocument, new FileOutputStream("C:\\certificate_template_output.pdf"));
 //            pdfDocument.open();
 //
 //            // Process the main content (paragraphs and tables)
