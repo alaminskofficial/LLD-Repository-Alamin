@@ -21,7 +21,7 @@ public class GetCharLocationAndSize extends PDFTextStripper {
 
     public static void main(String[] args) throws IOException {
         PDDocument document = null;
-        String fileName = "C:\\Users\\alamin\\Downloads\\tdsExemptionletterTest.pdf"; // Replace with your PDF file path
+        String fileName = "file_name.pdf"; // Replace with your PDF file path
         try {
             document = PDDocument.load(new File(fileName));
             GetCharLocationAndSize stripper = new GetCharLocationAndSize();
