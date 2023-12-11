@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigurationManager extends FileBasedConfigurationManager {
     private static ConfigurationManager instance;
     private Properties configurationProperties;
-    private static final String CONFIG_FILE_PATH = "C:\\Users\\alamin\\Desktop\\config.properties";
+    private static final String CONFIG_FILE_PATH = "C:\\Users\\config.properties";
 
     private ConfigurationManager() {
         this.configurationProperties = loadConfigurationFromFile(CONFIG_FILE_PATH);
