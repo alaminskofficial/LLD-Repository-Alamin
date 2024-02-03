@@ -1,5 +1,5 @@
 package org.example.designpattern.singleton;
-
+//@Author : Sk Alamin
 // Implementor interface
 interface DrawingAPI {
     void drawCircle(double x, double y, double radius);

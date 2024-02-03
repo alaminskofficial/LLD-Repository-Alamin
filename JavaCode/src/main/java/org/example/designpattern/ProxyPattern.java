@@ -1,5 +1,5 @@
 package org.example.designpattern.singleton;
-
+//@Author : Sk Alamin
 // Subject interface
 interface Image {
     void display();
