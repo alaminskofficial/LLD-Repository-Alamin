@@ -21,7 +21,7 @@ Solutions and explanations are provided in separate folders to help you understa
 Getting Started:
 Clone this repository to your local machine using the following command:
 
-git clone https://github.com/your-username/design-patterns-and-java-problems.git
+git clone https://github.com/alaminskofficial/LLD-Repository-Alamin.git
 Explore the directories, choose a design pattern, or tackle a coding problem based on your learning goals.
 
 Dive into the documentation, study the examples, and start implementing solutions.
