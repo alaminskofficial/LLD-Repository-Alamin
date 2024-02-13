@@ -17,8 +17,7 @@ public class Game {
     private int nextPlayerIndex;
     private List<Move> moves;
     private List<WinningStrategy> winningStrategies;
-    private Game(List<Player> playerList, int dimension,
-                 List<WinningStrategy> winningStrategies) {
+    private Game(List<Player> playerList, int dimension,List<WinningStrategy> winningStrategies) {
         this.nextPlayerIndex = 0;
         this.gameState = GameState.IN_PROGRESS;
         this.moves = new ArrayList<>();
@@ -80,6 +79,60 @@ public class Game {
     public static Builder getBuilder(){
         return new Builder();
     }
+
+    public void makeMove() {
+        Player player = playerList.get(nextPlayerIndex);
+        Cell cell = player.makeMove(board);
+        Move move = new Move(cell,player);
+        moves.add(move);
+        // check winner
+        if(checkWinner(move , board)){
+            gameState = GameState.CONCLUDED;
+            winner = player;
+            return;
+        }
+        // draw case check
+        if(moves.size()==board.getDimension()*board.getDimension()){
+            gameState = GameState.DRAW;
+            return ;
+        }
+        //update the next player index
+        nextPlayerIndex++;
+        nextPlayerIndex = nextPlayerIndex % playerList.size();
+
+    }
+
+    private boolean checkWinner(Move move, Board board) {
+        for(WinningStrategy winningStrategy: winningStrategies){
+            if(winningStrategy.checkWinner(board, move)){return true;}
+        }return false;
+    }
+
+    public void undoMove() {
+        if(moves.size()==0){
+            System.out.println("No moves to undo ");
+            return ;
+        }
+        Move lastMove = moves.get(moves.size() - 1);
+        moves.remove(lastMove);
+
+        Cell cell = lastMove.getCell();
+        cell.setPlayer(null);
+        cell.setCellState(CellState.EMPTY);
+
+        for(WinningStrategy winningStrategy: winningStrategies){
+            winningStrategy.handleUndo(board, lastMove);
+        }
+
+        if(nextPlayerIndex!=0){
+            nextPlayerIndex--;
+        }
+        else{
+            nextPlayerIndex = playerList.size()-1;
+        }
+
+    }
+
     public static class Builder {
         private List<Player> players;
         private int dimension;
@@ -114,7 +167,7 @@ public class Game {
             HashSet<Character> symbols = new HashSet<>();
             for(Player player: players){
                 if(symbols.contains(player.getSymbol())){
-                    throw new DuplicateSymbolForPlayer();
+                    throw new DuplicateSymbolForPlayer("It's a duplicate symbol. Please choose another unique symbol...");
                 }
                 symbols.add(player.getSymbol());
             }
@@ -123,7 +176,7 @@ public class Game {
         private void validateDimensionAndPlayerCount() throws PlayersAndBoardCountMismatch {
 
             if(players.size()!=(dimension-1)){
-                throw new PlayersAndBoardCountMismatch();
+                throw new PlayersAndBoardCountMismatch("Number of players does not match the expected count based on the board's dimension...");
             }
         }
         private void validateBotCount() throws MoreThanOneBotException {
@@ -133,7 +186,7 @@ public class Game {
                     botCount++;
                 }
                 if(botCount>1){
-                    throw new MoreThanOneBotException();
+                    throw new MoreThanOneBotException("More than one bot player not allowed...");
                 }
             }
         }

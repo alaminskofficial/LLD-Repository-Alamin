@@ -9,10 +9,8 @@ import org.example.machineCoding.tictactoe.strategy.WinningStrategy;
 import java.util.List;
 
 public class GameController {
-    public Game createGame(int dimension, List<Player> playerList,
-                           List<WinningStrategy> winningStrategyList)
+    public Game createGame(int dimension, List<Player> playerList,List<WinningStrategy> winningStrategyList)
             throws PlayersAndBoardCountMismatch, DuplicateSymbolForPlayer, MoreThanOneBotException {
-
         return Game.getBuilder()
                 .setPlayers(playerList)
                 .setDimension(dimension)
@@ -21,8 +19,13 @@ public class GameController {
     }
 
     public void printBoard(Game game){
-
         game.printBoard();
     }
+    public void makeMove(Game game){
+        game.makeMove();
+    }
 
+    public void undo(Game game) {
+       game.undoMove();
+    }
 }

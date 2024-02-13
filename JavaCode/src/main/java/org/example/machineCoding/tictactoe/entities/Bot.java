@@ -24,4 +24,13 @@ public class Bot extends Player{
     public void setBotPlayingStrategy(BotPlayingStrategy botPlayingStrategy) {
         this.botPlayingStrategy = botPlayingStrategy;
     }
+
+    @Override
+    public Cell makeMove(Board board) {
+        System.out.println(this.getName()+ "Bot is making move ..,");
+        Cell cell = botPlayingStrategy.makeMove(board);
+        cell.setCellState(CellState.FILLED);
+        cell.setPlayer(this);
+        return cell;
+    }
 }

@@ -5,6 +5,7 @@ public abstract class  Player {
     private String name;
     private int id;
     private PlayerType playerType;
+    public abstract Cell makeMove(Board board);
 
     public Player(Character symbol, String name, int id, PlayerType playerType) {
         this.symbol = symbol;

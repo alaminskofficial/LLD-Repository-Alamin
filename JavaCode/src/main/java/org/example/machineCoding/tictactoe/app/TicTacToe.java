@@ -1,4 +1,4 @@
-package org.example.machineCoding.tictactoe.entities;
+package org.example.machineCoding.tictactoe.app;
 //@Author Sk Alamin
 //Core logic to find a winner in TC: O(1)
 import java.util.HashMap;

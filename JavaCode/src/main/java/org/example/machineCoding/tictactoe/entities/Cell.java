@@ -43,7 +43,6 @@ public class Cell {
         this.player = player;
     }
     public void printCell() {
-
         if (cellState.equals(CellState.FILLED)) {
             System.out.print("| "+player.getSymbol()+" |");
         }
