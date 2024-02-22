@@ -1,10 +1,11 @@
-package org.example.machineCoding.parkingLotAssignment.controllers;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.controllers;
 
-import org.example.machineCoding.parkingLotAssignment.dtos.GenerateTicketRequestDto;
-import org.example.machineCoding.parkingLotAssignment.dtos.GenerateTicketResponseDto;
-import org.example.machineCoding.parkingLotAssignment.dtos.ResponseStatus;
-import org.example.machineCoding.parkingLotAssignment.models.Ticket;
-import org.example.machineCoding.parkingLotAssignment.services.TicketService;
+
+import org.example.machineCoding.parkingLot.parkingLotAssignment.dtos.GenerateTicketRequestDto;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.dtos.GenerateTicketResponseDto;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.dtos.ResponseStatus;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.Ticket;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.services.TicketService;
 
 public class TicketController {
 

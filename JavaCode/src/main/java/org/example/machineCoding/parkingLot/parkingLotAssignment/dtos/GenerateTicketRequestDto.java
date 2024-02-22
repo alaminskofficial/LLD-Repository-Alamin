@@ -1,4 +1,4 @@
-package org.example.machineCoding.parkingLotAssignment.dtos;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.dtos;
 
 public class GenerateTicketRequestDto {
     private int gateId;

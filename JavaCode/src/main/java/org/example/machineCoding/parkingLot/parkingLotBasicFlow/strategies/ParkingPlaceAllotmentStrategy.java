@@ -1,10 +1,10 @@
-package org.example.machineCoding.parkingLot.strategies;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.strategies;
 
 
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotFullException;
-import org.example.machineCoding.parkingLot.models.ParkingLot;
-import org.example.machineCoding.parkingLot.models.ParkingSpot;
-import org.example.machineCoding.parkingLot.models.VehicleType;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotFullException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.ParkingLot;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.ParkingSpot;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.VehicleType;
 
 public interface ParkingPlaceAllotmentStrategy {
 

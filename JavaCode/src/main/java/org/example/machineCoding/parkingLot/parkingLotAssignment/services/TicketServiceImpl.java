@@ -1,14 +1,16 @@
-package org.example.machineCoding.parkingLotAssignment.services;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.services;
 
-import org.example.machineCoding.parkingLotAssignment.exceptions.InvalidParkingLotException;
-import org.example.machineCoding.parkingLotAssignment.exceptions.ParkingSpotNotAvailableException;
-import org.example.machineCoding.parkingLotAssignment.exceptions.InvalidGateException;
-import org.example.machineCoding.parkingLotAssignment.models.*;
-import org.example.machineCoding.parkingLotAssignment.respositories.GateRepository;
-import org.example.machineCoding.parkingLotAssignment.respositories.TicketRepository;
-import org.example.machineCoding.parkingLotAssignment.respositories.VehicleRepository;
-import org.example.machineCoding.parkingLotAssignment.strategies.assignment.SpotAssignmentStrategy;
-import org.example.machineCoding.parkingLotAssignment.respositories.ParkingLotRepository;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidGateException;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidParkingLotException;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.ParkingSpotNotAvailableException;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.*;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.GateRepository;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.ParkingLotRepository;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.TicketRepository;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.VehicleRepository;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.strategies.assignment.SpotAssignmentStrategy;
+
+
 
 import java.util.Date;
 import java.util.Optional;

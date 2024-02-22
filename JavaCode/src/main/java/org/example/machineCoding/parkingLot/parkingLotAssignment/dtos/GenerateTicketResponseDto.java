@@ -1,7 +1,7 @@
-package org.example.machineCoding.parkingLotAssignment.dtos;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.dtos;
 
 
-import org.example.machineCoding.parkingLotAssignment.models.Ticket;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.Ticket;
 
 public class GenerateTicketResponseDto {
 

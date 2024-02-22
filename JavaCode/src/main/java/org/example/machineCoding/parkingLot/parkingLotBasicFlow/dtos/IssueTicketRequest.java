@@ -1,8 +1,8 @@
-package org.example.machineCoding.parkingLot.dtos;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.dtos;
 
 
-import org.example.machineCoding.parkingLot.models.VehicleType;
-import org.example.machineCoding.parkingLot.strategies.ParkingPlaceAllotmentStrategy;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.VehicleType;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.strategies.ParkingPlaceAllotmentStrategy;
 
 public class IssueTicketRequest {
 

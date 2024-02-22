@@ -1,7 +1,7 @@
-package org.example.machineCoding.parkingLot.dtos;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.dtos;
 
 
-import org.example.machineCoding.parkingLot.models.Ticket;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Ticket;
 
 public class IssueTicketResponse {
 

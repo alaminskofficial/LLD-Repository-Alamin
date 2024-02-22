@@ -1,4 +1,4 @@
-package org.example.machineCoding.parkingLotAssignment.models;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.models;
 
 import java.util.List;
 

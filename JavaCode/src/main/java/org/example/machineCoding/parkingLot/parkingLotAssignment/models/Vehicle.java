@@ -1,4 +1,4 @@
-package org.example.machineCoding.parkingLotAssignment.models;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.models;
 
 public class Vehicle extends BaseModel{
 

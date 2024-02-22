@@ -1,8 +1,9 @@
-package org.example.machineCoding.parkingLotAssignment.strategies.assignment;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.strategies.assignment;
 
-import org.example.machineCoding.parkingLotAssignment.models.ParkingLot;
-import org.example.machineCoding.parkingLotAssignment.models.ParkingSpot;
-import org.example.machineCoding.parkingLotAssignment.models.VehicleType;
+
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.ParkingLot;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.ParkingSpot;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.VehicleType;
 
 import java.util.Optional;
 

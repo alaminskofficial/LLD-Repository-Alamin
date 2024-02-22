@@ -1,8 +1,10 @@
-package org.example.machineCoding.parkingLot.repositories;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories;
 
 
 
-import org.example.machineCoding.parkingLot.models.Ticket;
+
+
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Ticket;
 
 import java.util.HashMap;
 import java.util.Map;

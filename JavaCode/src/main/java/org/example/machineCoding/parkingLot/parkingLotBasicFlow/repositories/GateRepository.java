@@ -1,9 +1,11 @@
-package org.example.machineCoding.parkingLot.repositories;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories;
 
 
 
-import org.example.machineCoding.parkingLot.exceptions.GateNotFoundException;
-import org.example.machineCoding.parkingLot.models.Gate;
+
+
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.GateNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Gate;
 
 import java.util.HashMap;
 import java.util.Map;

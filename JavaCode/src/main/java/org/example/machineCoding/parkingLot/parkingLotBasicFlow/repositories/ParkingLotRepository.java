@@ -1,9 +1,11 @@
-package org.example.machineCoding.parkingLot.repositories;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories;
 
 
 
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotNotFoundException;
-import org.example.machineCoding.parkingLot.models.ParkingLot;
+
+
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.ParkingLot;
 
 import java.util.HashMap;
 import java.util.Map;

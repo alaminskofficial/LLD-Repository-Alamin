@@ -1,4 +1,4 @@
-package org.example.machineCoding.parkingLot.models;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.models;
 
 public enum PaymentStatus {
 

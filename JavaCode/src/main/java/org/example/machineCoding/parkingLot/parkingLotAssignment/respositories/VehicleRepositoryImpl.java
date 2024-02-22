@@ -1,7 +1,8 @@
-package org.example.machineCoding.parkingLotAssignment.respositories;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.respositories;
 
-import com.scaler.parking_lot.models.*;
-import org.example.machineCoding.parkingLotAssignment.models.Vehicle;
+
+
+import org.example.machineCoding.parkingLot.parkingLotAssignment.models.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;

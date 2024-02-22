@@ -1,12 +1,13 @@
-package org.example.machineCoding.parkingLot.controllers;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.controllers;
 
 
-import org.example.machineCoding.parkingLot.dtos.*;
-import org.example.machineCoding.parkingLot.exceptions.GateNotFoundException;
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotFullException;
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotNotFoundException;
-import org.example.machineCoding.parkingLot.models.Ticket;
-import org.example.machineCoding.parkingLot.services.TicketService;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.dtos.IssueTicketRequest;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.dtos.IssueTicketResponse;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.GateNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotFullException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Ticket;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.services.TicketService;
 
 public class TicketController {
 

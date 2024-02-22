@@ -1,16 +1,18 @@
-package org.example.machineCoding.parkingLot.services;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.services;
 
 
-import org.example.machineCoding.parkingLot.dtos.IssueTicketRequest;
-import org.example.machineCoding.parkingLot.exceptions.GateNotFoundException;
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotFullException;
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotNotFoundException;
-import org.example.machineCoding.parkingLot.models.*;
-import org.example.machineCoding.parkingLot.repositories.GateRepository;
-import org.example.machineCoding.parkingLot.repositories.ParkingLotRepository;
-import org.example.machineCoding.parkingLot.repositories.TicketRepository;
-import org.example.machineCoding.parkingLot.repositories.VehicleRepository;
-import org.example.machineCoding.parkingLot.strategies.ParkingPlaceAllotmentStrategy;
+
+
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.dtos.IssueTicketRequest;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.GateNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotFullException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotNotFoundException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.*;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories.GateRepository;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories.ParkingLotRepository;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories.TicketRepository;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.repositories.VehicleRepository;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.strategies.ParkingPlaceAllotmentStrategy;
 
 import java.util.Date;
 import java.util.UUID;

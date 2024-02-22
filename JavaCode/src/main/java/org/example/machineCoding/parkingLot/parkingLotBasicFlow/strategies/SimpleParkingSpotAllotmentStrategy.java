@@ -1,8 +1,8 @@
-package org.example.machineCoding.parkingLot.strategies;
+package org.example.machineCoding.parkingLot.parkingLotBasicFlow.strategies;
 
 
-import org.example.machineCoding.parkingLot.exceptions.ParkingLotFullException;
-import org.example.machineCoding.parkingLot.models.*;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.exceptions.ParkingLotFullException;
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.*;
 
 public class SimpleParkingSpotAllotmentStrategy implements ParkingPlaceAllotmentStrategy{
 

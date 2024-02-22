@@ -1,4 +1,4 @@
-package org.example.machineCoding.parkingLotAssignment.exceptions;
+package org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions;
 
 public class ParkingSpotNotAvailableException extends Exception{
     public ParkingSpotNotAvailableException(String message) {
