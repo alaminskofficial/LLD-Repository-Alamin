@@ -1,13 +1,13 @@
 package org.example.machineCoding.parkingLot.parkingLotAssignment.services;
 
 
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidGateException;
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidParkingLotException;
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.ParkingSpotNotAvailableException;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.*;
 import org.example.machineCoding.parkingLot.parkingLotAssignment.models.Ticket;
 
+import java.util.List;
+
 public interface TicketService {
+
     // Do not modify the method signatures, feel free to add new methods
-    public Ticket generateTicket(int gateId, String registrationNumber, String vehicleType) throws InvalidGateException,
-            InvalidParkingLotException, ParkingSpotNotAvailableException;
+    public Ticket generateTicket(long gateId, String registrationNumber, String vehicleType , List<String> additionalServices) throws InvalidGateException, InvalidParkingLotException, ParkingSpotNotAvailableException, UnsupportedAdditionalService, AdditionalServiceNotSupportedByVehicle;
 }

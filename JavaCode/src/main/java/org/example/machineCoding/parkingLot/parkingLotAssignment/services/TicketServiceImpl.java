@@ -1,8 +1,6 @@
 package org.example.machineCoding.parkingLot.parkingLotAssignment.services;
 
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidGateException;
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.InvalidParkingLotException;
-import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.ParkingSpotNotAvailableException;
+import org.example.machineCoding.parkingLot.parkingLotAssignment.exceptions.*;
 import org.example.machineCoding.parkingLot.parkingLotAssignment.models.*;
 import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.GateRepository;
 import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.ParkingLotRepository;
@@ -11,8 +9,9 @@ import org.example.machineCoding.parkingLot.parkingLotAssignment.respositories.V
 import org.example.machineCoding.parkingLot.parkingLotAssignment.strategies.assignment.SpotAssignmentStrategy;
 
 
-
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 public class TicketServiceImpl implements TicketService{
@@ -30,7 +29,22 @@ public class TicketServiceImpl implements TicketService{
     }
 
     @Override
-    public Ticket generateTicket(int gateId, String registrationNumber, String vehicleType) throws InvalidGateException, InvalidParkingLotException, ParkingSpotNotAvailableException {
+    public Ticket generateTicket(long gateId, String registrationNumber, String vehicleType, List<String> additionalServicesList) throws InvalidGateException, InvalidParkingLotException, ParkingSpotNotAvailableException, UnsupportedAdditionalService, AdditionalServiceNotSupportedByVehicle {
+        List<AdditionalService> additionalServices = new ArrayList<>();
+        if(additionalServicesList != null) {
+            for (String additionalServiceStr : additionalServicesList) {
+                AdditionalService additionalService;
+                try {
+                    additionalService = AdditionalService.valueOf(additionalServiceStr);
+                } catch (IllegalArgumentException e) {
+                    throw new UnsupportedAdditionalService("Invalid additional service. plz check the notice board.. ");
+                }
+                if (!additionalService.getSupportedVehicleTypes().contains(VehicleType.valueOf(vehicleType))) {
+                    throw new AdditionalServiceNotSupportedByVehicle("Invalid vehicle type for additional service");
+                }
+                additionalServices.add(additionalService);
+            }
+        }
         Optional<Gate> optionalGate = this.gateRepository.findById(gateId);
         if (optionalGate.isEmpty()) {
             throw new InvalidGateException("Invalid gate id");
@@ -69,6 +83,8 @@ public class TicketServiceImpl implements TicketService{
         ticket.setParkingSpot(parkingSpot);
         ticket.setGate(gate);
         ticket.setParkingAttendant(gate.getParkingAttendant());
+        ticket.setAdditionalServices(additionalServices);
         return this.ticketRepository.save(ticket);
     }
+
 }

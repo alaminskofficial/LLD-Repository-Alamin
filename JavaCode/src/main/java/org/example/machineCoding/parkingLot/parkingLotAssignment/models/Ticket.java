@@ -1,6 +1,7 @@
 package org.example.machineCoding.parkingLot.parkingLotAssignment.models;
 
 import java.util.Date;
+import java.util.List;
 
 public class Ticket extends BaseModel{
     private Vehicle vehicle;
@@ -9,6 +10,7 @@ public class Ticket extends BaseModel{
     private ParkingSpot parkingSpot;
     private Gate gate;
     private ParkingAttendant parkingAttendant;
+    private List<AdditionalService> additionalServices;
 
     public Vehicle getVehicle() {
         return vehicle;
@@ -48,5 +50,13 @@ public class Ticket extends BaseModel{
 
     public void setParkingAttendant(ParkingAttendant parkingAttendant) {
         this.parkingAttendant = parkingAttendant;
+    }
+
+    public List<AdditionalService> getAdditionalServices() {
+        return additionalServices;
+    }
+
+    public void setAdditionalServices(List<AdditionalService> additionalServices) {
+        this.additionalServices = additionalServices;
     }
 }
