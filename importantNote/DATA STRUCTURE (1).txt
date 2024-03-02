@@ -1,0 +1,487 @@
+Q-1> WHAT IS DATA STRUCTURE?
+
+ANS:- The Data Structure is the way of organising and manupulation data for retrieval and access.
+         It also define the way different sets of data relate to one another, establishing relationship and forming algorithmns.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q-2> WHAT IS A LINEAR DATA STRUCTURE?
+
+ANS:- A data structure is linear if all its elements or data item are arranged in a sequence or a linear order. The elements are 
+         stored in a non-hierarchical way so that each item has successors and predecessors except the first and last element in 
+         the list.
+        Example of linear data structure are Arrays,stack,string,queue,and linked list.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q-3> WHAT IS LINKED LIST DATA STRUCTURE?
+
+ANS:- It is a linear data structure or a sequence of data where elements are not stored in contagious memory location.
+         The element are linked using pointers to form a chain.Each element is a seperate object, called a node.
+         Each node has two items:- a data field and a reference to the next node.The entry point in a linked list is called the head.
+         and the last node has a reference to null.
+                                                               A linked list is a dynamic data structure, where the number of nodes in not fixed, and the list has ability to grow and shrink on demand.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-4> WHAT ARE SOME APPLICATION OF DATA STRUCTURE?
+
+ANS:-
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q-5> WHAT ARE THE ADVANTAGES OF A LINKED LIST OVER AN ARRAY? 
+
+ANS:-
+          1.> Insertion and deletion of nodes is an easier process, as we only update the address present in the pointer of a node.
+                It's expensive to do the same in an array as the room has to be created for the new elements and existing elements must 
+                be shifted.
+          2.> As a linked list is a dynamic data structure, there is no need to give an initial size as it can grow and shrink at runtime by
+                allocating and deallocating memory. However, the size is limited in an array as the number of elements is statically stored
+                in the main memory.
+          3.> The main thing is that there is no wastage of memory bcz as the size of a linked list can increase or decrease depending on
+                the demands of the program, and memory is allocated only when required, there is no memory wasted. In the case of an 
+                array, there is memory wastage.
+                For Instance, if we declare an array of size 10 and store only five elements in it, then the space for five elements is wasted.
+         4.>  Data structure like stack and queue are more easily implemented using a linked list than an array.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-6> WHAT IS THE ADVANTAGES OF AN ARRAY OVER LINKED LIST?
+
+ANS:- Some scenarios in which we use array over the linked list are:-
+       
+        * When we need to index or randomly access elements.
+        * whem we know the number of elements in the array beforehand,so
+           we can allocate the corect amount of memory.
+        * when we need speed while iterating through all the elements in the sequence.
+        * when memory is concerned, filled array use less memory than linked lists, as 
+           each element in the array is the data but each linked list node requires the data
+          as well as one or more pointers that point to the other node in the linked list.
+     
+  ---> In summary we consider the requirement of space,time,and ease of implementation to decide whether to use a linked list or array.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-7> WHAT IS A DOUBLY-LINKED LIST?
+
+ANS:- It is a complex type of a linked list i.e double-ended linked list in which a node has two links, one that conncects to the next
+         node in the sequence and other that connects to the previous node. This allows traversal across the data elements in both 
+         directions.   
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-8> HOW DO YOU REFERENCE OR ACCESS ALL OF THE ELEMENTS IN A ONE-DIMENSIONAL ARRAY?
+
+ANS:- Using an indexed loop, we may access all of the elements in a one-dimensional array. The counter counts down from 0 to the
+         maximum array size n minus 1. The loop counter is used as the array subscript to refer to all items of the one-dimensional array.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-9> WHAT IS DYNAMIC DATA STRUCTURE?
+
+ANS::- They are collections of data that expand and contract to grow and shrink in size as a program runs. This enables the programmer
+          to control exactly how much memory is to be utilized.
+         
+       EXAMPLE:- dynamic array, linked list, stack, queue, and heap.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-10> WHAT IS AN ALOGITHMN?
+
+ANS:- An algorithm is a step by step method of solving a problem or manipulating data. It defines a  set of instruction to be executed
+         in a certain order to get the deisred output.
+        * It is independent from programing language.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q-11> WHY DO WE NEED TO DO AN ALGORITHM ANALYSIS?
+
+ANS:- 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-12> WHAT IS STACK?
+
+ANS:- A stack is a linear data structure. There are three basic operations that are performed on stack i.e push, pop,peek .
+         PUSH means adding element into stack, POP is removing element from stack while PEEK means return the value of stack's                   topmost element. The insertion and deletion of items takes place only at one end called top of the stack.
+         It follows a particular order i.e LIFO(last in first out) or FILO(first in last out).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-13> WHAT ARE STACKS USED?
+
+ANS:- It is used in conversion and evalutation of prefix,postfix,and infix expression.
+         It is also used in Backtracking.
+         It is used in memory management
+
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+Q-14> WHAT IS POSTFIX EXPRESSION?
+
+ANS:- A postfix expression is made up of operators and operands, with the operator coming after the operands.
+         for ex:- 
+               postfix expression of A+B is AB+.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-15> WHAT IS A QUEUE DATA STRUCTURE?
+
+ANS:- A queue  is a linear data structure which follows FIFO i.e (first in first out) operations to access elements. 
+         There are two basic operations that perform on queue i.e (enque and deque).
+         ENQUE means insertion of element in queue on the other hand DEQUE means deletion of element from queue.
+         we cannot perform both the operation at the same end in queue.
+         Enque i.e insertion of element is perform at one end called REAR and deletion of element can be performed only 
+         at the other end called FRONT. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-16> WHAT ARE THE USES OF QUEUE?
+
+ANS:-  * PRINTER
+          * CALL CENTER SYSTEM
+          * IMAGE UPLOADS
+          * TO MAINTAIN THE PLAYLIST IN MEDIA PLAYERS
+                
+               where the first one entered is the first to be processed  
+         
+         
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-17> WHAT IS DEQUEUE?
+
+ANS:- It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends(FRONT and REAR).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-18>  WHAT OPERATION CAN BE PERFORMED ON QUEUE?
+
+ANS:- ENQUEUE :-  Add an element to the end of the queue.
+         DEQUEUE :- Removes an element from the front of the queue.
+         IsEmpty:- test for whether or not the queue is empty.
+       * The front is used to get the value of the first data item but does not remove it.
+       * The rear is used to get the last item from a queue.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-19> WHAT ARE THE ADVANTAGES OF THE HEAP OVER A STACK?
+
+ANS:- Generally both heap and stack are part of memory.
+ 
+       *  Heap is more flexible than the stack because memory space can be dynamically allocated and de-allocated as needed.
+       *  Heap memory is used to store object, whereas stack memory is used to store local variable and function call.
+      
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-20> WHICH SORTING ALGORITHM IS CONSIDERED THE FASTEST?
+
+ANS:- The QUICKSORT algorithm is  generally considered the fastest because it has the best performance for most inputs.
+         quick sort are basically used when speed takes priority over stability.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-21> WHAT IS MERGE SORT? HOW DOES IT WORK?
+
+ANS:-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------  Q-22> WHAT IS SELECTION SORT? HOW DOES IT WORK?
+
+ANS:-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-23> WHAT ARE BUBBLE SORT? HOW DOES IT WORK?
+
+ANS:-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-24> DEFINE THE GRAPH DATA STRUCURE?
+
+ANS:- 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-25> WHAT ARE THE APPLICATION OF GRAPH DATA STRUCTURE?
+
+ANS:-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-26> LIST THE TYPES OF TREES?
+
+ANS:-  THE BINARY TREE:-
+                                   A binary tree is a tree data structure in which each node has at most two children, which are reffered to as the 
+                                   left child and the right child.
+
+           THE BINARY SEARCH TREE:- 
+                                   A binary search tree i.e. BST is a tree data structure in which each node has at most two children, which are 
+                                  reffered to as the left child and the right child. In BST left child must be smaller than its parent and right
+                                  child must be greater than its parent.
+  
+           THE AVL TREE:
+           
+           RED BLACK TREE:
+    
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-27> WHAT IS AVL TREE?
+
+ANS:-An AVL tree  is a type of binary search tree. Named after it's inventors Adelson,Velskii and Landis. AVL trees have the property
+        of dynamic self-balancing in addition to all the other properties  of binary seach tree.
+   
+      * The difference between the depth of right and left sub-tree must be among -1,0,1. This difference is called the balanced factor.
+        if the balance factor doesn't lie in -1,0,1 then we have to balance it by rotation.
+  
+     There are four rotations for balancing the tree:-
+    1. LEFT ROTATION (LL Rotation):-
+                                             every node moves one postion to left from the current positon.
+    2. RIGHT ROTATION(RR Rotation):-
+                                             every node moves one postion to right from the current postion.
+    3. LEFT-RIGHT ROTATION(LR Rotation):-
+                                             it is a combination of a single left rotation followed by a single right rotation.
+                                             every node moves one postion to the left, then one position to the right from 
+                                             current position.
+    4. RIGHT-LEFT ROTATION(RL Rotation):-
+                                             it is a combination of a single right rotation followed by single left rotation.
+                                             every node moves one postion to the left, then one position to the right from 
+                                             current position.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-28> WHAT IS RED-BLACK TREE?
+
+ANS:-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-29> WHAT IS DIFFERENCE BETWEEN B AND B+ TREE?
+
+ANS:- 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------  
+Q-30> EXPLAIN THE MAX AND MIN HEAP DATA STRUCTURE ?
+
+ANS:-MAX HEAP:-
+                   It is a type of heap data structure where the value of the root node is GREATER than or equal to its child node.
+  
+        MIN HEAP:-
+                     It is a type of heap data structure where the value of the root node is SMALLER than or equal to its child node.
+                   
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-31> HOW DO YOU FIND THE THE LENGHT OF A NODE IN A TREE?
+
+ANS:- The number of edges from the leaf node to the particular node in the longest path in known as the height of that node.
+        Note. In the tree, the height of the root node is called " Height of Tree".
+
+---------------------------------------------------------------------------------------------------------------------------------------------------Q-32> LIST THE AREA OF APPLICATIONS OF DATA STRUCTURE?
+
+ANS:- Data structure are applied extensively in the following areas of computer science.
+
+      * Compiler design
+      * Operating system
+      * Database Management System
+      * Artificial Intelligence
+      * Simulation
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-33> WHICH DATA STRUCTURE IS USED TO PERFORM RECURSION?
+
+ANS:- Stack data structure is used in recursion.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-34> WRITE THE STACK OVERFLOW CONDITION?
+
+ANS:- Overflow occurs when top=Maxsize-1.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-35> WHAT DATA STRUCTURE SUITS THE MOST IN TREE CONSTRUCTION?
+
+ANS:- QUEUE DATA STRUCTURE
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-36> WHAT ARE THE ADVANTAGES OF SELECTION SORT?
+
+ANS:- It is simple and easy to implement.
+
+      *  It can be used for small data sets.
+      *  It is 60 per cent more efficient than bubble sort.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-37> CAN YOU TELL HOW LINEAR DATA STRUCTURE DIFFER FROM NON-LINEAR DATA STRUCTURE?
+
+ANS:- Linear Data Structure:- 
+                  Data structure where data elements are arranged                   sequentially or linearly where each and every element is                   attached to its previous and next adjacent is called a                   linear data structure. In linear data structure, single level                   is involved. Therefore, we can traverse all the elements                   in single run only. 
+                  Its example are array,stack,queue,linked list etc.
+
+        Non-linear data structure:-
+    
+                  Data structures where data elements are not arranged                   sequentially or linearly are called non-linear data                   structures. In a non-linear data structure, single level is                   not involved. Therefore, we can’t traverse all the                   elements in single run only.
+                  Its example are tress and graphs.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q-38>WHAT IS AN ARRAY?
+
+ANS:- Arrays are the collection of similar types of data stored in           contiguous memory locations.
+       * It is the simplest data structure where the data element can be           accessed randomly just by using its index number.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q-39> WHAT IS A PRIORITY QUEUE?
+
+ANS:- A priority queue is an abstract data type that is like a normal           queue but has priority assigned to elements.
+       * Elements with higher priority are processed before the           elements with a lower priority.
+       * In order to implement this, a minimum of two queues are           required- one for the data and the other to store the priority.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Q-40> Can we store a duplicate key in HashMap?
+
+ANS:- N0, duplicate keys cannot be inserted in HashMap. If you try to          insert any entry with an existing key, then the old value would          be overridden with the new value. Doing this will not change          the size of hashmap.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Q-41> WHAT IS TREE DATA STRUCTURE?
+
+ANS:- A tree is a nonlinear hierarchical data structure that consists of         nodes connected by edges.
+      * A nodes is an entity that contains a value and pointer to its          child nodes.
+      * It is a hierarchial structure as elements in a tree are arranged in         multiple levels.
+     * In the Tree data structure, the topmost node is known as a root          node.Each node contains some data and the link or reference of          other node that can be called children.
+   
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Q-42>WHAT IS THE MAXIMUM NUMBER OF NODES IN A BINARY TREE OF HEIGHT K?
+
+ANS:- The maximum nodes are:- 2^k+1-1 where k >= 1.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q-43> WHAT ARE TREE TRAVERSALS?
+
+ANS:- Tree traversal is a process of visting all the nodes of a tree. Since root(head) is the first node and all nodes are connected via edges (or link). There are three way which we use to traverse a tree:-
+  1. Inorder Traversal:-
+                        left root right
+  2. Preorder Traversal:-
+                        root left right
+  3. Postorder Traversal:-
+                       left right root
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Q-44> HOW DO YOU REPRESENT A GRAPH?
+
+ANS:- WE CAN REPRESENT A GRAPH IN 2 WAYS:-
+     *  Adjacency matrix:- used for sequential data representation.
+     * Adjacency list:- used to represent linked data.
+
+---------------------------------------------------------------------------
+        
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+        
+ 
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
