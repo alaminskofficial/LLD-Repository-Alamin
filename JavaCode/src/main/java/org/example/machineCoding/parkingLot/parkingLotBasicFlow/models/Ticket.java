@@ -2,7 +2,9 @@ package org.example.machineCoding.parkingLot.parkingLotBasicFlow.models;
 
 
 
-import org.example.machineCoding.parkingLot.strategies.ParkingPlaceAllotmentStrategy;
+
+
+import org.example.machineCoding.parkingLot.parkingLotBasicFlow.strategies.ParkingPlaceAllotmentStrategy;
 
 import java.util.Date;
 
