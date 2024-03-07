@@ -1,10 +1,18 @@
 package org.example.machineCoding.splitwise.basicFlow.models;
 
 public class UserExpense {
+
     private User user;
     private Expense expense;
-    private double amount;
+    private int amount;
     private UserExpenseType userExpenseType;
+
+    public UserExpense(User user, Expense expense, int amount, UserExpenseType userExpenseType) {
+        this.user = user;
+        this.expense = expense;
+        this.amount = amount;
+        this.userExpenseType = userExpenseType;
+    }
 
     public User getUser() {
         return user;
@@ -22,11 +30,11 @@ public class UserExpense {
         this.expense = expense;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 

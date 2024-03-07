@@ -1,18 +1,18 @@
 package org.example.machineCoding.splitwise.basicFlow.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    private Long id;
+
     private String name;
-    private List<Expense> expenseList;
+    private List<User> users;
+    private List<Expense> expenses;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public Group(String name) {
+        this.name = name;
+        this.users  = new ArrayList<>();
+        this.expenses = new ArrayList<>();
     }
 
     public String getName() {
@@ -23,11 +23,19 @@ public class Group {
         this.name = name;
     }
 
-    public List<Expense> getExpenseList() {
-        return expenseList;
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setExpenseList(List<Expense> expenseList) {
-        this.expenseList = expenseList;
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<Expense> getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
     }
 }

@@ -1,17 +1,15 @@
 package org.example.machineCoding.splitwise.basicFlow.models;
 
 public class User {
-    private Long id ;
-    private  String name;
+
+    private String name;
+    private String phone;
     private String password;
-    private String mobileNumber;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public User(String name, String phone, String password) {
+        this.name = name;
+        this.phone = phone;
+        this.password = password;
     }
 
     public String getName() {
@@ -22,19 +20,19 @@ public class User {
         this.name = name;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
-
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
     }
 }

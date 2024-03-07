@@ -1,18 +1,15 @@
 package org.example.machineCoding.splitwise.basicFlow.models;
 
 public class Expense {
-    private long id ;
+
     private String description;
-    private double amount;
-    private  ExpenseType expenseType;
-    private long groupId;
+    private int amount; // total amount of the expense
+    private ExpenseType expenseType;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public Expense(String description, int amount, ExpenseType expenseType) {
+        this.description = description;
+        this.amount = amount;
+        this.expenseType = expenseType;
     }
 
     public String getDescription() {
@@ -23,11 +20,11 @@ public class Expense {
         this.description = description;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
@@ -37,13 +34,5 @@ public class Expense {
 
     public void setExpenseType(ExpenseType expenseType) {
         this.expenseType = expenseType;
-    }
-
-    public long getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(long groupId) {
-        this.groupId = groupId;
     }
 }
