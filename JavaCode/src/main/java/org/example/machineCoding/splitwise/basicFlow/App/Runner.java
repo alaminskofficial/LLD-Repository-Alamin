@@ -11,6 +11,7 @@ import org.example.machineCoding.splitwise.basicFlow.repositories.UserExpenseRep
 import org.example.machineCoding.splitwise.basicFlow.repositories.UserRepository;
 import org.example.machineCoding.splitwise.basicFlow.services.UserService;
 import org.example.machineCoding.splitwise.basicFlow.strategies.HeapSettleUpStrategy;
+import org.example.machineCoding.splitwise.basicFlow.strategies.SettleUpStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ public class Runner {
         ExpenseRepository expenseRepository = new ExpenseRepository();
         GroupRepository groupRepository = new GroupRepository();
         UserExpenseRepository userExpenseRepository = new UserExpenseRepository();
+        SettleUpStrategy settleUpStrategy = new HeapSettleUpStrategy();
 
         // create the users
         User a = new User("A", "12341234", "12341234");
@@ -76,7 +78,7 @@ public class Runner {
         groupRepository.addGroup(goaGroup);
 
         UserController userController = new UserController(new UserService(
-                groupRepository, userExpenseRepository, new HeapSettleUpStrategy()
+                groupRepository, userExpenseRepository, settleUpStrategy
         ));
 
         List<Transaction> transactions = userController.settleUser("a", "Goa Trip");
