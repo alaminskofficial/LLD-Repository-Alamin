@@ -3,6 +3,7 @@ package org.example.machineCoding.restaurentMgmtSystem.repositories;
 import org.example.machineCoding.restaurentMgmtSystem.models.Order;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class OrderRepositoryImpl implements OrderRepository{
@@ -20,5 +21,9 @@ public class OrderRepositoryImpl implements OrderRepository{
         }
         ordersMap.put(order.getId(), order);
         return order;
+    }
+    @Override
+    public List<Order> findOrdersByCustomerSession(long customerSessionId) {
+        return ordersMap.values().stream().filter(order -> order.getCustomerSession().getId() == customerSessionId).toList();
     }
 }
