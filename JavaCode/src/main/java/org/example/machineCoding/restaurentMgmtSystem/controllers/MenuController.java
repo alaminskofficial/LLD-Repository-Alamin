@@ -1,11 +1,11 @@
 package org.example.machineCoding.restaurentMgmtSystem.controllers;
 
 
-import org.example.machineCoding.restaurentMgmtSystem.dtos.AddMenuItemRequestDto;
-import org.example.machineCoding.restaurentMgmtSystem.dtos.AddMenuItemResponseDto;
-import org.example.machineCoding.restaurentMgmtSystem.dtos.ResponseStatus;
+import org.example.machineCoding.restaurentMgmtSystem.dtos.*;
 import org.example.machineCoding.restaurentMgmtSystem.models.MenuItem;
 import org.example.machineCoding.restaurentMgmtSystem.services.MenuService;
+
+import java.util.List;
 
 public class MenuController {
 
@@ -24,6 +24,18 @@ public class MenuController {
             return responseDto;
         } catch (Exception e){
             responseDto.setStatus(ResponseStatus.FAILURE);
+            return responseDto;
+        }
+    }
+    public GetMenuItemsResponseDto getMenuItems(GetMenuItemsRequestDto requestDto){
+        GetMenuItemsResponseDto responseDto = new GetMenuItemsResponseDto();
+        try {
+            List<MenuItem> menuItems = menuService.getMenuItems(requestDto.getDietaryRequirement());
+            responseDto.setMenuItems(menuItems);
+            responseDto.setResponseStatus(ResponseStatus.SUCCESS);
+            return responseDto;
+        } catch (Exception e){
+            responseDto.setResponseStatus(ResponseStatus.FAILURE);
             return responseDto;
         }
     }

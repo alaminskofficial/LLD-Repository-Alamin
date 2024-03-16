@@ -7,6 +7,7 @@ import org.example.machineCoding.restaurentMgmtSystem.models.*;
 import org.example.machineCoding.restaurentMgmtSystem.repositories.MenuRepository;
 import org.example.machineCoding.restaurentMgmtSystem.repositories.UserRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public class MenuServiceImpl implements MenuService{
@@ -37,6 +38,14 @@ public class MenuServiceImpl implements MenuService{
         menuItem.setDescription(description);
         menuItem = menuRepository.add(menuItem);
         return menuItem;
+    }
+    @Override
+    public List<MenuItem> getMenuItems(String itemType) {
+        if(itemType == null){
+            return menuRepository.getAll();
+        } else{
+            return menuRepository.getByDietaryRequirement(DietaryRequirement.valueOf(itemType));
+        }
     }
 
 }
