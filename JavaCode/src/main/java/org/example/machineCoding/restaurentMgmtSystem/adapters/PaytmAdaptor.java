@@ -1,9 +1,9 @@
 package org.example.machineCoding.restaurentMgmtSystem.adapters;
 
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Payment;
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.PaymentStatus;
 import org.example.machineCoding.restaurentMgmtSystem.libraries.paytm.PaytmApi;
 import org.example.machineCoding.restaurentMgmtSystem.libraries.paytm.PaytmPaymentResponse;
+import org.example.machineCoding.restaurentMgmtSystem.models.Payment;
+import org.example.machineCoding.restaurentMgmtSystem.models.PaymentStatus;
 
 public class PaytmAdaptor implements PaymentGatewayAdapter{
     private PaytmApi paytmApi;

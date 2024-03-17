@@ -1,6 +1,7 @@
 package org.example.machineCoding.restaurentMgmtSystem.dtos;
 
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.PaymentStatus;
+
+import org.example.machineCoding.restaurentMgmtSystem.models.PaymentStatus;
 
 public class MakePaymentResponseDto {
     private ResponseStatus responseStatus;

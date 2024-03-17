@@ -1,9 +1,10 @@
 package org.example.machineCoding.restaurentMgmtSystem.controllers;
 
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Payment;
+
 import org.example.machineCoding.restaurentMgmtSystem.dtos.MakePaymentRequestDto;
 import org.example.machineCoding.restaurentMgmtSystem.dtos.MakePaymentResponseDto;
 import org.example.machineCoding.restaurentMgmtSystem.dtos.ResponseStatus;
+import org.example.machineCoding.restaurentMgmtSystem.models.Payment;
 import org.example.machineCoding.restaurentMgmtSystem.services.PaymentService;
 
 public class PaymentController {

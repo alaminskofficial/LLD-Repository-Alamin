@@ -1,8 +1,9 @@
 package org.example.machineCoding.restaurentMgmtSystem.adapters;
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.Payment;
-import org.example.machineCoding.parkingLot.parkingLotBasicFlow.models.PaymentStatus;
+
 import org.example.machineCoding.restaurentMgmtSystem.libraries.razorpay.RazorpayApi;
 import org.example.machineCoding.restaurentMgmtSystem.libraries.razorpay.RazorpayPaymentResponse;
+import org.example.machineCoding.restaurentMgmtSystem.models.Payment;
+import org.example.machineCoding.restaurentMgmtSystem.models.PaymentStatus;
 
 public class RazorpayAdaptor {
     public class RazorpayAdapter implements PaymentGatewayAdapter{
