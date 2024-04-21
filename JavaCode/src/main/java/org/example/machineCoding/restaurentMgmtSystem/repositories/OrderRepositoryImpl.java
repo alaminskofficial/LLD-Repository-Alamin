@@ -24,6 +24,7 @@ public class OrderRepositoryImpl implements OrderRepository{
     }
     @Override
     public List<Order> findOrdersByCustomerSession(long customerSessionId) {
-        return ordersMap.values().stream().filter(order -> order.getCustomerSession().getId() == customerSessionId).toList();
+        return ordersMap.values().stream()
+                .filter(order -> order.getCustomerSession().getId() == customerSessionId).toList();
     }
 }
