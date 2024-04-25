@@ -1,4 +1,4 @@
-package org.example.designpattern.singleton.connectionPool;
+package org.example.designpattern.singleton;
 
 import java.util.LinkedList;
 import java.util.Queue;

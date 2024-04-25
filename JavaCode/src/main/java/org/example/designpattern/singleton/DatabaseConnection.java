@@ -1,4 +1,4 @@
-package org.example.designpattern.singleton.connectionPool;
+package org.example.designpattern.singleton;
 
 public class DatabaseConnection {
 }
