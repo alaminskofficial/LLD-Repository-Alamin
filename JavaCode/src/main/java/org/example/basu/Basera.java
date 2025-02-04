@@ -1,2 +1,2 @@
-package org.example.basu;public class Basera {
+package org.example.basu;public class B {
 }
